@@ -1,0 +1,15 @@
+#!/usr/bin/sudo bash
+#1/31/23
+#Steven Barnabei
+#Purpose is restorative to restart network services after monitoring tests are complete.
+
+echo $(sudo ifconfig wlan0mon down)
+echo $(sudo ip link set wlan0mon name wlan0)
+echo $(sudo iwconfig wlan0 mode managed)
+echo $(sudo macchanger -r wlan0)
+echo $(sudo macchanger -r wlan1)
+echo $(sudo ifconfig wlan0 up)
+echo $(sudo ifconfig wlan1 up)
+echo $(sudo systemctl start wpa_supplicant)
+echo $(sudo service NetworkManager start)
+ifconfig
