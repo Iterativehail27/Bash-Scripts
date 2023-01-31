@@ -1,7 +1,7 @@
 #!/usr/bin/sudo bash
 #1/31/23
 #Steven Barnabei
-#Purpose is restorative to restart network services after monitoring tests are complete.
+#Purpose is restorative to restart network services after monitoring tests are complete & to offer mindful, additional security before reconnecting to a public wifi network.
 
 echo $(sudo ifconfig wlan0mon down)
 echo $(sudo ip link set wlan0mon name wlan0)
