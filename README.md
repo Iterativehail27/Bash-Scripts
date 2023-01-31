@@ -12,7 +12,7 @@ This only works with this specific setup mentioned here, I make no guarantees fo
 <br>
 <h2> Installation </h2>
 <br>
--to install simply create two new .sh files from your favorite text file editor (vim for example), name it whatever you like and copy the code from the bash script files in the main repository labeled Wifi bash script (Monitor Mode)/(Startup Recovery) then paste them to their own .sh files. Save the file.
+-to install simply create two new .sh files from your favorite text file editor (vim for example), name it whatever you like and copy the code from the bash script files in the main repository labeled Wifi bash script (Monitor Mode)/(Startup Recovery) then paste them separately to the .sh files that you had just made. Save the files.
 <br><br>
 -Now either leave the file where it is at or use the mv command to move the file to a new directory that is convenient for you such as ~/Documents/Wifi_bash_scripts and execute the command chmod +x (FILE NAME HERE) to make it executable. Additionally you can configure these now executable .sh files as hotkeys on your keyboard either through using the command bind or just going to system settings in kali linux and adding a hotkey then pointing to the individual files in their respective file path.
 <br><br>
