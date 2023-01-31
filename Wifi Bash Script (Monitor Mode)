@@ -1,0 +1,13 @@
+#!/usr/bin/sudo bash
+#1/31/23
+#Steven Barnabei
+#Purpose is to create a shortcut for disabling network services and switching modes/names of wifi adapters.
+
+echo $(sudo service NetworkManager stop)
+echo $(sudo systemctl stop wpa_supplicant)
+echo $(sudo ifconfig wlan1 down)
+echo $(sudo ifconfig wlan0 down)
+echo $(sudo ip link set wlan0 name wlan0mon)
+echo $(sudo iwconfig wlan0mon mode monitor)
+echo $(sudo ifconfig wlan0mon up)
+ifconfig
