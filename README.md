@@ -4,7 +4,7 @@
 <h3> (1) Wifi Bash Scripts (Monitor Mode) & (Startup Recovery)</h3>
 <br>
 <h2> Requirements: </h2>
-This only works with this specific setup mentioned here, I make no guarantees for any other setup without manual configuration. (Make sure all Network cards are plugged in before startup).
+This only works with this specific setup mentioned here, I make no guarantees for any other setup without necessitating manual configuration. (Make sure all Network cards are plugged in before startup).
 <br><br>
 1. On-board wifi network card & an additional add-on wifi network card
 <br><br>
