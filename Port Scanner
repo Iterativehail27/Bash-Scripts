@@ -1,0 +1,23 @@
+ip address show scope global | grep "brd" | grep 'inet' | cut -d " " -f 6 | cut -d '/' -f 1 | cut -d "." -f 1,2,3 | uniq > octets.txt
+
+#set variable to the output of octets.txt
+
+OCTETS=$(cat octets.txt)
+
+#create new .txt for the class C network address named after the class C network
+
+echo "" > $OCTETS.txt
+
+#loop ping for all addresses in network
+
+for ip in {1..254}
+do
+ping -c 1 $OCTETS.$ip | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" >> $OCTETS.txt &
+done
+
+cat $OCTETS.txt
+
+#scan
+nmap -sS -iL $OCTETS.txt
+
+exit
