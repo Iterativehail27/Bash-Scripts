@@ -25,7 +25,7 @@ This only works with this specific setup mentioned here, I make no guarantees fo
 <h2> Disclaimer: </h2>
 The following bash script makes use of Nmap and depending on what country you're in and who owns the network you are going to be port scanning on, you will require written permission to run this command, or it may not be allowed at all by law. Use discretion and make sure to only test this script on networks owned by you or make sure you have explicit written and signed permission from the owner and the CISO or chief technical officer if they have one, to use it to test their network for security purposes only.
 <h2> Requirements: </h2>
-1. Linux distribution of any kind. 
+1. Kali Linux is tested here but any Linux distribution of any kind should work or perform similarly with some tweaks.
 <br><br>
 2. Nmap.
 <br>
