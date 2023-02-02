@@ -1,3 +1,9 @@
+#!/usr/bin/sudo bash
+#2/1/23
+#Steven Barnabei
+#Purpose is to be able to compile existing network addresses on a network you are connected to and scan ports for security flaws such as opened ports
+on machines that should have no open ports, so you're able to fix those flaws.
+
 ip address show scope global | grep "brd" | grep 'inet' | cut -d " " -f 6 | cut -d '/' -f 1 | cut -d "." -f 1,2,3 | uniq > octets.txt
 
 #set variable to the output of octets.txt
