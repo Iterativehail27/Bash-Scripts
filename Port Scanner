@@ -6,26 +6,29 @@ on machines that should have no open ports, so you're able to fix those flaws.
 
 #Get class C Network address
 
-ip address show scope global | grep "brd" | grep 'inet' | cut -d " " -f 6 | cut -d '/' -f 1 | cut -d "." -f 1,2,3 | uniq > octets.txt
+ip address show scope global | grep "brd" | grep 'inet' | cut -d " " -f 6 | cut -d '/' -f 1 | cut -d "." -f 1,2,3 | uniq > address.txt
 
-#set variable to the output of octets.txt
+#set variable to the output of address.txt
 
-OCTETS=$(cat octets.txt)
+ADRESSES=$(cat address.txt)
 
 #create new .txt for the class C network address named after the class C network
 
-echo "" > $OCTETS.txt
+echo "" > $ADRESSES.txt
 
 #loop ping for all addresses in network
 
 for ip in {1..254}
 do
-  ping -c 1 $OCTETS.$ip | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" >> $OCTETS.txt &
+  ping -c 1 $ADRESSES.$ip | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" >> $ADRESSES.txt &
 done
 
-cat $OCTETS.txt
+cat $ADRESSES.txt
 
 #scan
-nmap -sS -iL $OCTETS.txt
+nmap -sS -iL $ADRESSES.txt
 
 exit
+
+
+#Thank you to Hackpens2246 https://www.youtube.com/@hackpens2246 for his tutorial on bash scripting with nmap that influenced this code.
