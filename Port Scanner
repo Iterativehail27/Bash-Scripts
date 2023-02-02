@@ -6,7 +6,7 @@ on machines that should have no open ports, so you're able to fix those flaws.
 
 #Get class C Network address
 
-ip address show scope global | grep "brd" | grep 'inet' | cut -d " " -f 6 | cut -d '/' -f 1 | cut -d "." -f 1,2,3 | uniq > address.txt
+ip address show scope global | grep "brd" | grep 'inet' | cut -d " " -f 6 | cut -d '/' -f 1 | cut -d "." -f 1-3 | uniq > address.txt
 
 #set variable to the output of address.txt
 
