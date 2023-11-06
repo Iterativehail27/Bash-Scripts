@@ -1,0 +1,2 @@
+#!/bin/bash
+ip a | grep 'inet ' | sed -n 2p | awk '{print $2}'
