@@ -39,5 +39,6 @@ The following bash script makes use of Nmap and depending on what country you're
 -You may have to use elevated privileges because of Nmap, prefixing sudo before typing in the command should allow you to run it.
 
 <br><br>
-<h3> (2) Ip_address_checker </h3>
-Simple bash script used to check the network addressable IP address of the linux machine and nothing else. It may need fine-tuning under the 'sed' tool section requiring the number n after $ to be changed based on the output of 'ip a' where the rows we are grabbing info from with grep are differentiated in the increasing sequence 1,2,3,4,5 and so on.
+<h3> (3) Ip_address_checker </h3>
+<br>
+-Simple bash script used to check the network addressable IP address of the linux machine and nothing else. It may need fine-tuning under the 'sed' tool section requiring the number n after $ to be changed based on the output of 'ip a' where the rows we are grabbing info from with grep are differentiated in the increasing sequence 1,2,3,4,5 and so on.
