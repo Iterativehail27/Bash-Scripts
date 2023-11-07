@@ -42,3 +42,8 @@ The following bash script makes use of Nmap and depending on what country you're
 <h3> (3) Ip_address_checker </h3>
 <br>
 -Simple bash script used to check the network addressable IP address of the linux machine and nothing else. It may need fine-tuning under the 'sed' tool section requiring the number n before 'p' to be changed based on the output of 'ip a' where the rows we are grabbing info from with grep are differentiated in the increasing sequence 1,2,3,4,5 and so on.
+
+<br><br>
+<h3> (4) Group_analyzer </h3>
+<br>
+-Simple bash script that attempts to analyze members of groups and the groups they are members of on a 1,000-1,999 GID basis meaning you can use groupadd or useradd 999 times before this file must be edited to include the thousand digit as a [0-n] option, it is intentionally limited to 1,000-1,999 for the sake of tidyness and less output to the less pager to scroll through. The output is sorted alphabetically by the first field which is where the group name is found ( the 'accounting' group will come before the 'legal' group )
